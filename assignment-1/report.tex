@@ -33,5 +33,24 @@
     \end{figure}
     \chapter*{Part 4: Protocol Overhead}
 
+    total bytes = 23079\\
+    total payload = 23014\\\\
+
+    Ratio of payload to bytes = 23079 / 23014 = 99.7\%\\
+    Amount of overhead = 100\% - 99.7\% = 0.3\%\\
+
+    Therefore 0.3\% of the overall download is overhead.\\
+
     \chapter*{Part 5: Demultiplexing Keys}
+    \section{}
+    \subsection{}
+    The Type field is the demultiplexing key for the ethernet header.\\
+
+    The type field indicates IPv4 which corresponds to the IP header.\\
+
+    \subsection{}
+    The protocol field is the demultiplexing key for the IP header.\\
+
+    The protocol field indicates TCP (6) which corresponds to the TCP header.\\
+
 \end{document}
