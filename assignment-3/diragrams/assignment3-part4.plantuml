@@ -1,0 +1,17 @@
+@startuml
+
+left to right direction
+!theme spacelab
+
+component computer as "Computer"
+circle    router   as "Router"
+cloud     internet as "Internet"
+component server   as "Server"
+
+computer <--> router
+
+router <--> internet
+
+internet <--> server
+
+@enduml
