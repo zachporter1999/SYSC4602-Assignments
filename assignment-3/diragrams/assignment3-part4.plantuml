@@ -1,17 +1,21 @@
 @startuml
 
-left to right direction
 !theme spacelab
 
-component computer as "Computer"
-circle    router   as "Router"
-cloud     internet as "Internet"
-component server   as "Server"
+component computer   as "Computer"
+circle    src_router as "Router"
+cloud     internet   as "Internet"
+circle    dst_router as "Router"
+component server     as "Server"
 
-computer <--> router
+note left of src_router : IP Address: 74.125.127.106\n
+note left of computer   : Ethernet Address: Dell_d5:10:8b (00:25:64:d5:10:8b)\n
+note left of server     : Ethernet Address: IETF-VRRP-VRID_01 (00:00:5e:00:01:01)\n
+note left of dst_router : IP Address: ov-in-f106.1e100.net\n
 
-router <--> internet
-
-internet <--> server
+computer   --> src_router
+src_router --> internet
+internet   --> dst_router
+dst_router --> server
 
 @enduml
