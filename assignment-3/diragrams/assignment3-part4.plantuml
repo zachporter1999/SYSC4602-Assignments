@@ -8,14 +8,14 @@ cloud     internet   as "Internet"
 circle    dst_router as "Router"
 component server     as "Server"
 
-note left of src_router : IP Address: 74.125.127.106\n
 note left of computer   : Ethernet Address: Dell_d5:10:8b (00:25:64:d5:10:8b)\n
-note left of server     : Ethernet Address: IETF-VRRP-VRID_01 (00:00:5e:00:01:01)\n
-note left of dst_router : IP Address: ov-in-f106.1e100.net\n
+note left of src_router : IP Address: 74.125.127.106\n
+note right of dst_router : IP Address: ov-in-f106.1e100.net\n
+note right of server     : Ethernet Address: IETF-VRRP-VRID_01 (00:00:5e:00:01:01)\n
 
-computer   --> src_router
-src_router --> internet
-internet   --> dst_router
-dst_router --> server
+computer   --u--> src_router
+src_router ..r..> internet
+internet   ..r..> dst_router
+dst_router --d--> server
 
 @enduml
