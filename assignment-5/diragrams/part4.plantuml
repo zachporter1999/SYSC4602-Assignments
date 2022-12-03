@@ -8,16 +8,14 @@ node  node2    as "Node 2\n\t10.30.74.5"
 node  node3    as "Node 3\n\t10.30.52.1"
 cloud node4    as "Node 4\n\t*"
 node  node5    as "Node 5\n\t10.30.58.1"
-cloud node6    as "Node 6\n\t*"
-cloud node7_29 as "23 other unknown nodes"
-cloud node30   as "Node 30\n\t*" #ffaaaa
+cloud node6_30 as "30 unknown nodes"
+node  node31   as "Node 31\n\twww.uwa.edu.au\n\t(20.37.196.199)" #ffaaaa
 
-node1 --> node2
-node2 --> node3
-node3 -r-> node4
-node4 -r-> node5
-node5 -r-> node6
-node6 -u-> node7_29
-node7_29 -u-> node30
+node1    --> node2
+node2    -r-> node3
+node3    --> node4
+node4    --> node5
+node5    -l-> node6_30
+node6_30 --> node31
 
 @enduml
