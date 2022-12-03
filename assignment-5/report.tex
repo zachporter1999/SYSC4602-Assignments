@@ -27,7 +27,10 @@
     \subsection*{4}
     The TTL field on packets sent from our computer is not its maximum value of 256 (0xFF). It is a lower value of 64 (0x40)
     \subsection*{5}
+    The flags indicate if the packet has been fragmented, and the fragment offset will indicate fragmentation aswell.\\
+    In our trace the flags indicate not to fragment and the fragmentation offset is 0.
     \subsection*{6}
+    The header length is 20 bytes.
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=\textwidth]{images/part3.drawio.png}
